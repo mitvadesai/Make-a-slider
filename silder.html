@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>silder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div align="center" class="my-5">
+        <h2>view user</h2>
+        <table border="1" class="table table-striped">
+            <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>email</th>
+                <th>phone</th>
+                <th>city</th>
+                <th>salary</th>
+                <th>degi</th>
+                <th>dep</th>
+            </tr>
+        </thead>
+            <tbody id="users"></tbody>
+        </table>
+    </div>
+
+
+    <script>
+
+        let products = [
+            {
+                id: 1,
+                name: "ashish",
+                email: "ashu@gmail.com",
+                phone: "1121212",
+                city: "surat",
+                salary: 20000,
+                degi: "senior",
+                dep: "programming",
+            },
+            {
+                id: 2,
+                name: "hari",
+                email: "hari@gmail.com",
+                phone: "5454545",
+                city: "surat",
+                salary: 22000,
+                degi: "junior",
+                dep: "ui/ux",
+            },
+            {
+                id: 3,
+                name: "raj",
+                email: "raj@gmail.com",
+                phone: "454545",
+                city: "vadodara",
+                salary: 25000,
+                degi: "junior",
+                dep: "bde",
+            },
+            {
+                id: 4,
+                name: "deep",
+                email: "deep@gmail.com",
+                phone: "565656",
+                city: "vapi",
+                salary: 30000,
+                degi: "tl",
+                dep: "webdesign",
+            },
+            {
+                id: 5,
+                name: "jay",
+                email: "jay@gmail.com",
+                phone: "5565656",
+                city: "rajkot",
+                salary: 20000,
+                degi: "senior",
+                dep: "programming",
+            },
+            {
+                id: 6,
+                name: "ajay",
+                email: "ajay@gmail.com",
+                phone: "5565656",
+                city: "vapi",
+                salary: 25000,
+                degi: "manager",
+                dep: "ui/ux",
+            }
+        ]
+        let viewproduct = () => {
+            let tbl = "";
+            products.map((val, index) => {
+                tbl += `
+                 <tr>
+                <th>${val.id}</th>
+                <th>${val.name}</th>
+                <th>${val.email}</th>
+                <th>${val.phone}</th>
+                <th>${val.city}</th>
+                <th>${val.salary}</th>
+                <th>${val.degi}</th>
+                <th>${val.dep}</th>
+            </tr>
+                `
+                document.getElementById("users").innerHTML = tbl;
+            });
+
+        }
+        viewproduct();
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
